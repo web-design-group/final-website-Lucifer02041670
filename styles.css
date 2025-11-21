@@ -1,0 +1,275 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/inter.min.css");
+
+:root {
+	--bg: #111111;
+	--text: #FFFFFF;
+	--how: #44FF00;
+	--line: #9F9F9F;
+	--line-strong: #9F9F9F;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	margin: 0;
+	color: var(--text);
+	background-color: var(--bg);
+}
+
+section {
+	position: relative;
+	padding-top: 32px;
+}
+
+img {
+	width: auto;
+	height: auto;
+}
+
+p{
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	font-size: 32px;
+	width: min(1360px, 90%);
+	margin: auto;
+}
+
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background: #181818;
+	margin-bottom: 40px;
+}
+
+.headerrow {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	color: var(--text);
+	text-decoration: none;
+	font-weight: 800;
+	font-size: 32px;
+}
+
+.navlist {
+	display: flex;
+	list-style: none;
+	gap: 104px;
+	font-size: 20px;
+}
+
+.navlink {
+	display: inline-flex;
+	padding: 0 16px;
+	color: var(--text);
+	text-decoration: none;
+}
+
+.navlink:hover {
+	color: var(--how);
+	transform: translateY(-1px);
+}
+
+.pill {
+	margin-left: 8px;
+	display: inline-flex;
+	align-items: center;
+	height: 40px;
+	font-size: 20px;
+	padding: 0 16px;
+	border-radius: 999px;
+	font-weight: 600;
+	text-decoration: none;
+	color: var(--text);
+	border: 1px solid var(--line);
+}
+
+.pill:hover {
+	color: var(--how);
+	border-color: var(--how);
+	transform: translateY(-1px);
+}
+
+.title {
+	text-align: center;
+	margin: 18px 0 22px;
+	font-size: 64px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	background: #202020;
+	border: 1px solid var(--line);
+	border-radius: 40px;
+	padding-top: 56px;
+	box-shadow:
+    0 30px 80px rgba(0,0,0,0.45),
+    0 10px 30px rgba(0,0,0,0.35);
+}
+
+.cardin {
+	display: flex;
+	width: min(1170px, 90%);
+	border-radius: 40px;
+	background: #404040;
+	gap: 28px;	
+	padding: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 42px;
+	align-items: center;
+}
+
+.cardcol {
+	max-width: 1170px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cardcol--text {
+	display: flex;
+	margin-left: 52px;
+	flex-direction: column;
+}
+
+.cta {
+	display: flex;
+	justify-content: center;
+	margin: 200px 0 4px;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 44px;
+	border-radius: 999px;
+	text-decoration: none;
+	border: 1px solid var(--line);
+}
+
+.btn--light {
+	color: var(--text);
+	padding: 25px 97px;
+	font-size: 32px;
+	margin: 62px;
+}
+.btn--light:hover {
+	box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+	transform: translateY(-1px);
+	color: var(--how);
+	border-color: var(--how);
+}
+
+.footer {
+	border-radius: 40px 40px 0 0;
+	margin-top: 36px;
+	padding: 28px 0 20px;
+	background: #2A2A2A;
+}
+
+.footergrid {
+	display: flex;
+	gap: clamp(16px, 4vw, 48px);
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.footercol {
+	min-width: 220px;
+	color: var(--muted);
+	font-size: 20px;
+}
+
+.footertitle {
+	color: var(--text);
+	font-size: 32px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 0 0 10px;
+}
+
+.footerbrand {
+	text-align: right;
+	margin-left: auto;
+	font-size: 32px;
+}
+
+.footerbottom {
+	display: flex;
+	justify-content: flex-end;
+	color: var(--muted);
+	font-size: 16px;
+}
+
+.footerlist {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.footerlist a {
+	color: var(--text);
+	text-decoration: none;
+}
+
+.footerlist a:hover {
+	color: var(--how);
+}
+
+
+@media ( max-width : 1280px ){
+	.navlist {
+		gap: 0px;
+		justify-content: space-between;
+
+	}
+}
+
+@media (max-width: 620px) {
+	
+	.logo {
+  		font-size: 20px;
+	}
+	
+	.container {
+		font-size: 16px;
+
+	}
+	
+	 .cardin {
+    	flex-direction: column;
+  	}
+	
+	.navlist {
+    	display: none;
+	}
+	
+	.title {
+		font-size: 32px;
+	}
+	
+	.footergrid {
+  		display: flex;
+		align-content: center;
+  		flex-direction: column;
+	}
+	
+}
